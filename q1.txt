@@ -1,0 +1,13 @@
+So.q1
+Python
+
+
+def priceCheck(products, productPrices, productSold,soldPrice):
+ list = {}
+ for i in range(len(products)):
+    list.update({products[i]:productPrices[i]})
+ countErrors=0
+ for i in range(len(productSold)):
+    if list[productSold[i]] != soldPrice[i]:
+        countErrors+=1
+ return countErrors 

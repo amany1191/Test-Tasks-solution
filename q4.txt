@@ -1,0 +1,28 @@
+So.q4 
+C
+
+#include <limits.h>
+
+
+void MaxRand(int max,int count){
+    int val;
+    scanf("%d",&val);
+    if(val == 0){
+        printf("\n(%d;%d)",max,count);
+        return;
+    }
+    if(max<val){
+        count = 1;
+        max = val;
+    }
+    else if(max == val){
+        count ++;
+    }
+    MaxRand(max,count);
+}
+
+
+void getMaxRand(){
+    MaxRand(INT_MIN,0);
+}
+
